@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CryptoList-ReactJS/static/css/main.fb506b8c.css",
-    "main.js": "/CryptoList-ReactJS/static/js/main.fa6dce73.js",
+    "main.js": "/CryptoList-ReactJS/static/js/main.9277f6a4.js",
     "static/media/example.png": "/CryptoList-ReactJS/static/media/example.f1182c026fdf41a2ec80.png",
     "static/media/btcgif.gif": "/CryptoList-ReactJS/static/media/btcgif.ffa0e333a0e7b576f5a7.gif",
     "static/media/coinb.png": "/CryptoList-ReactJS/static/media/coinb.6bbf576f7c542110c320.png",
@@ -13,10 +13,10 @@
     "static/media/loading.svg": "/CryptoList-ReactJS/static/media/loading.be51f76ad67187ea0c2ce84841fb1474.svg",
     "index.html": "/CryptoList-ReactJS/index.html",
     "main.fb506b8c.css.map": "/CryptoList-ReactJS/static/css/main.fb506b8c.css.map",
-    "main.fa6dce73.js.map": "/CryptoList-ReactJS/static/js/main.fa6dce73.js.map"
+    "main.9277f6a4.js.map": "/CryptoList-ReactJS/static/js/main.9277f6a4.js.map"
   },
   "entrypoints": [
     "static/css/main.fb506b8c.css",
-    "static/js/main.fa6dce73.js"
+    "static/js/main.9277f6a4.js"
   ]
 }
