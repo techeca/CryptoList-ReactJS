@@ -6,8 +6,8 @@ import { BrowserRouter } from "react-router-dom";
 
 
 ReactDOM.render(
-    <BrowserRouter>
+<BrowserRouter basename='/CryptoList-ReactJS'>
       <App />
-    </BrowserRouter>,
+  </BrowserRouter>  ,
   document.getElementById('root')
 );

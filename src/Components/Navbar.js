@@ -16,7 +16,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Home from './Home';
 import Assets from './Assets';
 import Exchanges from './Exchanges';
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter, Router, Route, Routes, Link, HashRouter, useNavigate  } from "react-router-dom";
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
 import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -105,6 +105,7 @@ const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [theme, setTheme] = useState(localTheme);
+  const navigate = useNavigate()
 
   const toggleTheme = () => {
     if (theme === 'lightTheme') {
@@ -138,12 +139,7 @@ const Navbar = () => {
           <Container maxWidth='xl'>
             <Toolbar disableGutters>
 
-            <Typography
-              variant="h6"
-              noWrap
-              component="div"
-              sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
-            >
+            <Typography variant="h6" noWrap component="div" sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}>
             <img src={logo} width="48px" />
             </Typography>
 
@@ -156,9 +152,9 @@ const Navbar = () => {
               </Box>
 
               <Stack spacing={3} direction='row' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                <Button variant='Default' href='./'>Home</Button>
-                <Button variant='Default' href='./Assets'>Assets</Button>
-                <Button variant='Default' href='./Exchanges'>Exchanges</Button>
+                <Button variant='Default' onClick={() => navigate('/')}>Home</Button>
+                <Button variant='Default' onClick={() => navigate('/Assets')}>Assets</Button>
+                <Button variant='Default' onClick={() => navigate('/Exchanges')}>Exchanges</Button>
               </Stack>
 
               <Box sx={{ flexGrow: 0}}>
@@ -190,11 +186,13 @@ const Navbar = () => {
           </Container>
         </AppBar>
         <Container maxWidth='100%'>
+
         <Routes>
           <Route exact path='/' element={<Home/>}/>
           <Route exact path='/Assets' element={<Assets/>}/>
           <Route exact path='/Exchanges' element={<Exchanges/>}/>
         </Routes>
+
         </Container>
       </CssBaseline>
       <NavbarBottom />
